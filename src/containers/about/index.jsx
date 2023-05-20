@@ -9,24 +9,21 @@ import { FaDev, FaDatabase } from "react-icons/fa";
 const personalDetails = [
   {
     label: "Name",
-    value: "John Doe",
+    value: "Ekhfa Hossain",
   },
   {
     label: "Age",
-    value: "27",
+    value: "24",
   },
   {
     label: "Address",
-    value: "India",
+    value: "Bangladesh",
   },
   {
-    label: "Email",
-    value: "demo@example.com",
+    label: "Contact",
+    value: "ekhfahossain@gmail.com",
   },
-  {
-    label: "Contact No",
-    value: "+11 3456789056",
-  },
+  
 ];
 
 const jobSummary =

@@ -12,7 +12,7 @@ import { useState } from "react";
 const portfolioData = [
   {
     id: 2,
-    name: "Ecommerce",
+    name: "Social Media Opinion Mining Based on Bangla Public Post of Facebook",
     image: ImageOne,
     link: "",
   },
@@ -115,7 +115,10 @@ const Portfolio = () => {
               <div className="overlay">
                 {index === hoveredValue && (
                   <div>
-                    <p>{item.name}</p>
+                    <p className="card-text">
+                      white space: normal;
+                      
+                      {item.name}</p>
                     <button>Visit</button>
                   </div>
                 )}
