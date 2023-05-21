@@ -1,10 +1,48 @@
 import React from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { Animate } from "react-simple-animate";
 import "./styles.scss";
 
 const Contact = () => {
+  const form = useRef(); //declaring form with hook
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    const user_name = document.querySelector(".inputName").value;
+    const user_email = document.querySelector(".inputEmail").value;
+    const description = document.querySelector(".inputDescription").value;
+
+    console.log("Name:", user_name);
+    console.log("Email:", user_email);
+    console.log("Description:", description);
+
+    emailjs
+      .sendForm(
+        "service_c2ao1d8",
+        "template_5m6ciih",
+        form.current,
+        "oxm_k88W-Gok4RPq8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Email Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    // Clear the input fields if needed
+    document.querySelector(".inputName").value = "";
+    document.querySelector(".inputEmail").value = "";
+    document.querySelector(".inputDescription").value = "";
+  };
+
   return (
     <section id="contact" className="contact">
       <PageHeaderContent
@@ -36,7 +74,11 @@ const Contact = () => {
             transform: "translateX(0px)",
           }}
         >
-          <div className="contact__content__form">
+          <form
+            ref={form}
+            onSubmit={handleFormSubmit}
+            className="contact__content__form"
+          >
             <div className="contact__content__form__controlswrapper">
               <div>
                 <input
@@ -73,11 +115,12 @@ const Contact = () => {
                 </label>
               </div>
             </div>
-            <button>Submit</button>
-          </div>
+            <button onClick={handleFormSubmit}>Submit</button>
+          </form>
         </Animate>
       </div>
     </section>
   );
 };
+
 export default Contact;
