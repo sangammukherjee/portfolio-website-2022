@@ -2,10 +2,9 @@ import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 import ImageOne from "../../images/image1.jpg";
-import ImageTwo from "../../images/image2.jpg";
+import ImageTwo from "../../images/image2.png";
 import ImageThree from "../../images/image3.jpg";
-import ImageFour from "../../images/image4.jpg";
-import ImageFive from "../../images/image5.jpg";
+
 import "./styles.scss";
 import { useState } from "react";
 
@@ -17,30 +16,19 @@ const portfolioData = [
     link: "",
   },
   {
-    id: 3,
-    name: "Notes App",
+    id: 2,
+    name: "Real-time traffic monitoring and traffic offense detection using YOLOv4 and OpenCV DNN",
     link: "",
     image: ImageTwo,
   },
   {
-    id: 2,
-    name: "Supplier Design",
+    id: 3,
+    name: "DocTalk",
     image: ImageThree,
     link: "",
   },
-  {
-    id: 2,
-    name: "Todo App",
-    image: ImageFour,
+  
 
-    link: "",
-  },
-  {
-    id: 3,
-    name: "Shopping cart design",
-    image: ImageFive,
-    link: "",
-  },
 ];
 
 const filterData = [
@@ -50,11 +38,11 @@ const filterData = [
   },
   {
     filterId: 2,
-    label: "Developement",
+    label: "RESEARCH",
   },
   {
     filterId: 3,
-    label: "Design",
+    label: "APP",
   },
 ];
 
@@ -115,12 +103,12 @@ const Portfolio = () => {
               <div className="overlay">
                 {index === hoveredValue && (
                   <div>
-                    <p className="card-text">
-                      white space: normal;
-                      
-                      {item.name}</p>
-                    <button>Visit</button>
-                  </div>
+                  <p className="card-text" style={{ whiteSpace: 'normal' }}>
+                    {item.name}
+                  </p>
+                  <button>Visit</button>
+                </div>
+                
                 )}
               </div>
             </div>
