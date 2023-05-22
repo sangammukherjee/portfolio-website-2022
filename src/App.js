@@ -10,6 +10,7 @@ import Portfolio from "./containers/portfolio";
 import Contact from "./containers/contact";
 import Navbar from "./components/navBar";
 import particles from "./utils.js/particles";
+import Thesis from "./containers/thesis";
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,8 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thesis" element={<Thesis />} />
+
       </Routes>
       </div>
 
