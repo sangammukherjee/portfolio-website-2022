@@ -7,25 +7,26 @@ import ImageThree from "../../images/image3.jpg";
 
 import "./styles.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const portfolioData = [
   {
     id: 2,
     name: "Social Media Opinion Mining Based on Bangla Public Post of Facebook",
     image: ImageOne,
-    link: "",
+    link: "/thesis",
   },
   {
     id: 2,
     name: "Real-time traffic monitoring and traffic offense detection using YOLOv4 and OpenCV DNN",
-    link: "",
+    link: "/traffic-monitoring",
     image: ImageTwo,
   },
   {
     id: 3,
     name: "DocTalk",
     image: ImageThree,
-    link: "",
+    link: "/doctalk",
   },
   
 
@@ -106,9 +107,10 @@ const Portfolio = () => {
                   <p className="card-text" style={{ whiteSpace: 'normal' }}>
                     {item.name}
                   </p>
-                  <button>Visit</button>
-                </div>
-                
+                  <Link to={item.link}>
+                     <button>Visit</button>
+                   </Link>                  
+                </div>               
                 )}
               </div>
             </div>

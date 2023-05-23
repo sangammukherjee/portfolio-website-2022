@@ -10,7 +10,7 @@
       border: 1px dashed var(--yellow-theme-main-color);
 
       li {
-        font-size: 16px;
+        font-size: 12px;
         display: inline-block;
         cursor: pointer;
         position: relative;
@@ -18,7 +18,7 @@
         text-transform: uppercase;
         padding: 12px 20px;
         overflow: hidden;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
 
         &.active {
           background: var(--yellow-theme-main-color);
@@ -81,11 +81,11 @@
                 p{
                     color: #000000;
                     margin: 0px;
-                    font-size: 4rem;
+                    font-size: 3rem;
                     position: relative;
                     overflow: hidden;
                     white-space: nowrap;
-                    animation: typingEffect 1s steps(30,end);
+                    animation: typingEffect 1s steps(20,end);
                 }
 
                 button{
