@@ -11,6 +11,8 @@ import Contact from "./containers/contact";
 import Navbar from "./components/navBar";
 import particles from "./utils.js/particles";
 import Thesis from "./containers/thesis";
+import Traffic from "./containers/traffic-monitoring";
+import DocTalk from "./containers/doctalk";
 
 function App() {
   const location = useLocation();
@@ -43,6 +45,8 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thesis" element={<Thesis />} />
+        <Route path="/traffic-monitoring" element={<Traffic />} />
+        <Route path="/doctalk" element={<DocTalk />} />
 
       </Routes>
       </div>
