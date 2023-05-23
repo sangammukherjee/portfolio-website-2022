@@ -1,63 +1,32 @@
-import React from "react";
+import React from 'react';
+
 import PageHeaderContent from "../../components/pageHeaderContent";
-//import { BsInfoCircleFill } from "react-icons/bs";
+import { BsInfoCircleFill } from "react-icons/bs";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css'
-import { data } from "./utils";
 import './styles.scss';
-//import {MdWork} from 'react-icons/md';
 
-const Resume = () => {
+const App = () => {
   return (
-    <section id="resume" className="resume">
-      <PageHeaderContent
-        headerText="My Resume"
-        //icon={<BsInfoCircleFill size={40} />}
-      />
-      <div className="timeline">
-        <div className="timeline__experience">
-          <h3 className="timeline__experience__header-text">Experience</h3>
-          <VerticalTimeline
-            layout={"0-column"}
-            lineColor="var(--yellow-theme-main-color)"
-          >
-            {data.experience.map((item, i) => (
-              <VerticalTimelineElement
-                key={i}
-                className="timeline__experience__vertical-timeline-element"
-                contentStyle={{
-                  background: 'none',
-                  color : 'var(--yellow-theme-sub-text-color)',
-                  border : '1.5px solid var(--yellow-theme-main-color)'
-                }}
-               
-              >
-                <div className="vertical-timeline-element-title-wrapper">
-                  <h3>
-                    {item.title}
-                  </h3> 
-                </div>
-                
-                {/* <h4>
-                    {item.subTitle}
-                  </h4> */}
-                <p className="vertical-timeline-element-title-wrapper-description">
-                  {item.description}  </p>
-                  <p className="vertical-timeline-element-title-wrapper-description">
-                    {item.date} </p>
-
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
+    <div className="app">
+      <header className="app-header">
+        <h1> Social Media Opinion Mining Based on Bangla Public Post of Facebook </h1>
+        <div className="header-line"></div>
+      </header>
+      <main className="app-content">
+        <div className="description-container">
+            <p> ● Sentiment analysis using traditional machine learning techniques (TF-IDF vectors, crossvalidation, uni-bi-trigram, logistic regression, etc.) on Bangla Facebook Post.
+                ● Created a database that contains more than eleven thousand Bangla comments.
+                ● Challenges: Scraping comments from Facebook posts and filtering out the data using python
+                ● Skills Learned: Traditional ML algorithms, python, LaTeX
+             </p>
         </div>
-
-          
-        </div>
-      
-    </section>
+      </main>
+    </div>
   );
 };
-export default Resume;
+
+export default App;
