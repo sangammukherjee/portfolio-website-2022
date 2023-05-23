@@ -5,7 +5,7 @@ export const data = {
      // subTitle: "North South University",
       description:
         "North South University",
-      date: "2021",
+      date: "2022",
     },
   ],
   education: [
