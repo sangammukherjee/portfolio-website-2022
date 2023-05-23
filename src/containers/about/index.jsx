@@ -27,7 +27,7 @@ const personalDetails = [
 ];
 
 const jobSummary =
-  "I am a very hardworking and focused person"
+  "Highly motivated and skilled Computer Science & Engineering graduate seeking challenging opportunities in the field of software development and research."
 const About = () => {
   return (
     <section id="about" className="about">
