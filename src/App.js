@@ -23,16 +23,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* particles js */}
 
       {renderParticleJsInHomePage && (
         <Particles id="particles" options={particles} init={handleInit} />
       )}
 
-      {/* navbar */}
       <Navbar />
-
-      {/* main page content */}
       <div className="App__main-page-content">
       <Routes>
         <Route index path="/" element={<Home />} />
